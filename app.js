@@ -1,12 +1,15 @@
 import express from 'express';
 import 'dotenv/config'; 
 import userRoutes from './routes/userRoutes.js';
+import taskRoutes from './routes/taskRoutes.js';
 
 const app = express();
 app.use(express.json());
 
+
 // creat users 
 app.use('/users', userRoutes);
+app.use('/task', taskRoutes);
 
 
 
